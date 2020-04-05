@@ -1,0 +1,63 @@
+<% if @errors %>
+<div class="alert alert-warning">
+  <p>Ошибка!</p>
+  <% @errors.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+</div>
+<% end %>
+
+<h2>Анкета вкладчика</h2>
+<form method='post'>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">ФИО</span>
+  </div>
+  <input type="text"  class="form-control" placeholder="Введите Вашу фамилию" name = 'surname' value = '<%= @depositor.surname %>'>
+  <input type="text"  class="form-control" placeholder="Введите Ваше имя" name = 'name' value = '<%= @depositor.name %>'>
+  <input type="text"  class="form-control" placeholder="Введите Ваше отчество"  name = 'middle_name' value = '<%= @depositor.middle_name %>'>
+</div>
+<br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Номер счета</span>
+  </div>
+  <input type="number"  class="form-control" placeholder="Введите номер счета" name = 'account_number' value = '<%= @depositor.account_number %>'>
+</div>
+<br>
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Выберите вид вклада</label>
+    <select class="form-control" name='deposit_type'>
+    <% @deposit_list.each do |dp| %>  
+      <option><%= dp.name %></option>
+    <% end %>
+    </select>
+  </div>
+<br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Сумма</span>
+  </div>
+  <input type="number"  class="form-control" placeholder="Введите сумму вклада" name = 'sum' value = '<%= @depositor.sum %>'>
+</div><br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Дата открытия</span>
+  </div>
+   <input type="date"  name = 'opening_date' value = '<%= @depositor.opening_date %>'>
+</div><br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Ключевое слово</span>
+  </div>
+  <input type="text"  class="form-control" placeholder="Введите ключевое слово"  name = 'keyword' value = '<%= @depositor.keyword %>'>
+</div><br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Последняя дата начисления процентов</span>
+  </div>
+    <input type="date"  name = 'last_date' value = '<%= @depositor.last_date %>'> 
+</div>
+<br>
+<button type="submit" class="btn btn-primary" >Подтвердить</button>
+</form>

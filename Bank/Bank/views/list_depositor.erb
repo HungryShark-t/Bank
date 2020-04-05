@@ -1,0 +1,31 @@
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Имя</th>
+      <th scope="col">Отчество</th>
+      <th scope="col">Номер счета</th>
+      <th scope="col">Вид вклада</th>
+      <th scope="col">Сумма вклада</th>
+      <th scope="col">Дата открытия вклада</th>
+      <th scope="col">Ключевое слово</th>
+      <th scope="col">Последняя дата начисления процентов</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  <% @depositor_list.each do |dp| %>
+   <tr>
+      <td><%= dp.surname %></td>
+      <td><%= dp.name %></td>
+      <td><%= dp.middle_name %></td>
+      <td><%= dp.account_number %></td>
+      <td><%= dp.deposit_type %></td>
+      <td><%= dp.sum %></td>
+      <td><%= dp.opening_date %></td>
+      <td><%= dp.keyword %></td>
+      <td><%= dp.last_date %></td>
+   </tr>
+  <% end %>
+  </tbody>
+</table> 

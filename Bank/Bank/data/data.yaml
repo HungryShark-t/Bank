@@ -1,0 +1,79 @@
+deposit:
+  - name: Память и гордость
+    percent: 6.5
+    popolnenie: false
+  - name: Пенсионный Плюс
+    percent: 3.5
+    popolnenie: true
+  - name: Подари жизнь
+    percent: 5.65
+    popolnenie: false
+  - name: Пополняй
+    percent: 5.15
+    popolnenie: false
+  - name: Пополняй на имя ребенка
+    percent: 5.15
+    popolnenie: true
+  - name: Социальный
+    percent: 4.750
+    popolnenie: true
+  - name: Сохраняй
+    percent: 5.6
+    popolnenie: false
+
+depositor:
+  - surname: Мышкин
+    name: Май
+    middle_name: Юрьевич
+    account_number: 575016
+    deposit_type: Социальный
+    sum: 194984
+    opening_date: "2005-10-23"
+    keyword: Каспер
+    last_date: "2019-05-11"
+  - surname: Комаров
+    name: Трофим
+    middle_name: Лукьянович
+    account_number: 281821
+    deposit_type: Память и гордость
+    sum: 56138
+    opening_date: "2018-01-01"
+    keyword: Пайрон
+    last_date: "2019-04-17"
+  - surname: Громов
+    name: Донат
+    middle_name: Альбертович
+    account_number: 541091
+    deposit_type: Сохраняй
+    sum: 100000
+    opening_date: "2015-07-07"
+    keyword: Бриг
+    last_date: "2019-06-12"
+  - surname: Евсеева
+    name: Ева 
+    middle_name: Богдановна
+    account_number: 483150
+    deposit_type: Память и гордость
+    sum: 288448
+    opening_date: "2017-03-15"
+    keyword: Фрэш
+    last_date: "2019-06-17"
+  - surname: Кузнецова
+    name: Аксинья
+    middle_name: Максимовна
+    account_number: 578783
+    deposit_type: Подари жизнь
+    sum: 157318
+    opening_date: "2019-01-01"
+    keyword: Берти
+    last_date: "2019-06-06"
+  - surname: Кузнецова
+    name: Аксинья
+    middle_name: Максимовна
+    account_number: 578784
+    deposit_type: Пополняй на имя ребенка
+    sum: 50000
+    opening_date: "2019-01-01"
+    keyword: Берти
+    last_date: "2019-06-06"
+  

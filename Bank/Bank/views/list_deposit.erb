@@ -1,0 +1,25 @@
+
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Название вклада</th>
+      <th scope="col">Ежегодный процент(%)</th>
+      <th scope="col">Возможность пополнения</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  <% @deposit_list.each do |dp| %>
+   <tr>
+      <td><%= dp.name %></td>
+      <td><%= dp.percent %></td>
+      <% if dp.popolnenie %>
+      <td> Да </td>
+      <% else %>
+       <td >Нет</td>
+      <% end %>
+      
+   </tr>
+  <% end %>
+  </tbody>
+</table>

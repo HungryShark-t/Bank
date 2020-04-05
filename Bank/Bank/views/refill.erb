@@ -1,0 +1,21 @@
+<% if @errors %>
+<div class="alert alert-warning">
+  <p>Ошибка!</p>
+  <% @errors.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+</div>
+<% end %>
+
+<h2>Пополнение вклада</h2>
+<form  method = 'post'>
+    <div class="form-group">
+        <label for="name">Введите номер счета для пополнения вклада </label>
+       <input type="number"  class="form-control" placeholder="Введите номер счета" name = 'account_number' value = '<%= @a %>'>
+    </div>
+    <div class="form-group">
+        <label for="name">Введите сумму пополнения: </label>
+       <input type="number"  class="form-control" placeholder="Введите сумму" name = 'sum' value = "<%= @b %>">
+    </div>
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+</form>  

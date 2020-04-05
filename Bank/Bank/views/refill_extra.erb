@@ -1,0 +1,18 @@
+<% if @errors %>
+<div class="alert alert-warning">
+  <p>Ключевое слово или фамилия не совпадаютс с выбранным счетом!</p>
+</div>
+<% end %>
+
+<h3>Для подверждения операции введите фамилию и ключевое слово</h3>
+<form  method = 'post'>
+    <div class="form-group">
+        <label for="name">Фамилия </label>
+       <input type="text"  class="form-control" placeholder="Введите фамилию" name = 'surname' value = '<%= @surname %>'>
+    </div>
+    <div class="form-group">
+        <label for="name">Введите ключевое слово </label>
+       <input type="text"  class="form-control" placeholder="Введите ключевое слово" name = 'keyword'>
+    </div>
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+</form> 
